@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();  // Cargar las variables de entorno desde el archivo .env
 
-// Función para crear un token de verificación
+// Función para crear un token de verificación aa
 const generateVerificationToken = (userId) => {
     return jwt.sign(
         { id: userId },
