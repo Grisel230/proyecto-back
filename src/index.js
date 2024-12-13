@@ -1,8 +1,10 @@
-import app from './app/app.js';
-import { variables } from './config/variables.js';
-import { getLocalTime } from './utils/dateFormatter.js';
 
+
+const app = require("./app/app.js");
+const variables = require("./config/variables.js");
+const { getLocalTime } = require("./utils/dateFormatter");
 const port = variables.app.port;
+
 
 app.listen(port, () => {
     const startTime = getLocalTime();  // Obtiene la hora local formateada

@@ -1,9 +1,7 @@
-import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
-dotenv.config();  // Cargar las variables de entorno desde el archivo .env
-
-// Función para crear un token de verificación aa
+// Función para crear un token de verificación
 const generateVerificationToken = (userId) => {
     return jwt.sign(
         { id: userId },

@@ -1,9 +1,16 @@
-import moment from 'moment-timezone';
 
-export const getLocalTime = () => {
+
+const moment = require('moment-timezone');
+
+const getLocalTime = () => {
     return moment.tz("America/Mazatlan").format('YYYY-MM-DD HH:mm:ss');
 };
 
-export const getLocalDate = () => {
+const getLocalDate = () => {
     return new Date(getLocalTime());
+};
+
+module.exports = {
+    getLocalTime,
+    getLocalDate
 };

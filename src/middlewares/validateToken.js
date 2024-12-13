@@ -1,8 +1,5 @@
-import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
-
-dotenv.config();  // Cargar las variables de entorno desde el archivo .env
-
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 const authRequired = (req, res, next) => {
     try {
@@ -40,4 +37,4 @@ const authRequired = (req, res, next) => {
     }
 }
 
-export { authRequired };
+module.exports = { authRequired };
